@@ -2,18 +2,14 @@ interface Pages {
     title: string;
     likes: number;
     accounts: string[];
-    status: string;
+    status: "open" | "close"; 
     details?: {
         createAt: Date;
         updateAt: Date;
     };
-
-
-    
 }
 
-
-const page1 = {
+const page1: Pages = {
     title: 'The awesome page',
     likes: 100,
     accounts: ['Max', 'Anton', 'Nikita'],
@@ -24,9 +20,9 @@ const page1 = {
     }
 };
 
-    const page2 = {
-        title: 'Python or Js',
-        likes: 5,
-        accounts: ['Alex'],
-        status: 'close',
-    };
+const page2: Pages = {
+    title: 'Python or Js',
+    likes: 5,
+    accounts: ['Alex'],
+    status: 'close',
+};
